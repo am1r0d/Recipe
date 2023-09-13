@@ -17,6 +17,7 @@ const Popular = () => {
     // Fetch data
     const getPopular = async () => {
         const check = localStorage.getItem("popular");
+
         if (check) {
             setPopular(JSON.parse(check));
         } else {
@@ -24,6 +25,7 @@ const Popular = () => {
                 `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`
             );
             const data = await api.json();
+
             localStorage.setItem("popular", JSON.stringify(data.recipes));
             console.log(data.recipes);
             setPopular(data.recipes);
@@ -63,7 +65,7 @@ const Popular = () => {
 };
 
 const Wrapper = styled.div`
-    margin: 4rem orem;
+    margin: 4rem 0rem;
 `;
 
 const Card = styled.div`
@@ -73,7 +75,7 @@ const Card = styled.div`
     position: relative;
 
     img {
-        border-radius: 2rem;
+        border-radius: 1rem;
         position: absolute;
         left: 0;
         width: 100%;
