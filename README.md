@@ -1,1 +1,2 @@
-REACT_APP_API_KEY=08b623b2e5f741f68c210252cceb7ea1
+you can visit this app on `https://recipe-six-azure.vercel.app`
+
